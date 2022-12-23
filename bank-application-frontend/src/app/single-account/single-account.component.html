@@ -1,0 +1,14 @@
+<div class="single_account">
+  <p>Account Number: {{account.accountNumber}}</p>
+  <p>Available funds: {{account.availableFunds}}</p>
+  <button type="button" (click)="showOperations()">Show operations</button>
+  <button type="button" (click)="showTransactions()">Show transactions</button>
+  <button type="button" (click)="deleteAccount()">Delete Account</button>
+  <div [hidden]="!operationsVisible">
+    <app-account-operations [account]="account"></app-account-operations>
+  </div>
+  <div [hidden]="!transactionsVisible">
+    <app-transactions-display
+      [account]="account"></app-transactions-display>
+  </div>
+</div>

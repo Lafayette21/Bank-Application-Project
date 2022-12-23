@@ -1,0 +1,18 @@
+.internal_operations{
+  padding: 20px;
+  border: crimson solid 1px;
+  margin-top: 20px;
+}
+
+#buttons {
+  margin-top: 20px;
+}
+
+input {
+  margin-left: 20px;
+}
+
+button {
+  margin-right: 20px;
+}
+

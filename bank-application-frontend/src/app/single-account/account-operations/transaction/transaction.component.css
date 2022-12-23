@@ -1,0 +1,10 @@
+.external_operations{
+  border: crimson solid 1px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+input {
+  margin-left: 20px;
+  margin-top: 20px;
+}

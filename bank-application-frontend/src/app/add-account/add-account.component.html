@@ -1,0 +1,15 @@
+<div class="createAccount">
+  <form #addAccountForm="ngForm" (ngSubmit)="submit()">
+    <div>
+      <label for="money">Amount of money</label>
+      <input type="text" id="money" required [(ngModel)]="model.availableFunds" name="money"/>
+    </div>
+    <br>
+    <button [disabled]="!addAccountForm.form.valid" type="submit">Submit</button>
+  </form>
+  <div [hidden]="!successfullySubmitted">
+    <h2>You submitted: </h2>
+    <p>Your new accounts number: {{model.accountNumber}}</p>
+    <p>Starting funds: {{model.availableFunds}}</p>
+  </div>
+</div>

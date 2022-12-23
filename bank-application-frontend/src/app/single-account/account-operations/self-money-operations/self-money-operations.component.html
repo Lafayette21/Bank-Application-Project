@@ -1,0 +1,10 @@
+<div class="internal_operations">
+  <div>
+    <label for="amount">Amount</label>
+    <input id="amount" required min="1" [(ngModel)]="amount"/>
+    <div id="buttons">
+      <button (click)="payIntoAccount()" type="button">Pay into</button>
+      <button (click)="withdrawFromAccount()" type="button">Pay out</button>
+    </div>
+  </div>
+</div>
