@@ -4,15 +4,17 @@ import com.Lafayette21.bankapplication.exception.NoAccountFoundException;
 import com.Lafayette21.bankapplication.model.Account;
 import com.Lafayette21.bankapplication.relationships.Transaction;
 import com.Lafayette21.bankapplication.repository.AccountRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class AccountService {
-    @Autowired
-    private AccountRepository repository;
+    private final AccountRepository repository;
+
+    public AccountService(AccountRepository repository) {
+        this.repository = repository;
+    }
 
     public List<Account> getAccounts() {
         return repository.findAll();

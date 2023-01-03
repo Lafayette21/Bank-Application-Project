@@ -3,7 +3,6 @@ package com.Lafayette21.bankapplication.controller;
 import com.Lafayette21.bankapplication.model.Account;
 import com.Lafayette21.bankapplication.relationships.Transaction;
 import com.Lafayette21.bankapplication.service.AccountService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,8 +12,11 @@ import java.util.List;
 @CrossOrigin("http://localhost:4200")
 @RequestMapping("app/account")
 public class AccountController {
-    @Autowired
-    private AccountService accountService;
+    private final AccountService accountService;
+
+    public AccountController(AccountService accountService) {
+        this.accountService = accountService;
+    }
 
     @GetMapping("/all")
     public List<Account> getAccounts(){
