@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin("https://bank-application-frontend.herokuapp.com/")
+@CrossOrigin("*")
 @RequestMapping("app/account")
 public class AccountController {
     private final AccountService accountService;
